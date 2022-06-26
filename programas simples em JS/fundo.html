@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundando o fundo</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            text-align: center;
+            color: #fff;
+        }
+        .botoes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px;
+        }
+        button{
+            margin: 20px;
+            width: 100px;
+            height: 80px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(228, 135, 20);
+            box-shadow: inset 0 0 1em gold, 0 0 1em white;
+        }
+        
+    </style>
+</head>
+<body id="cor">
+    <h1><b>Clique em uma cor para mudar o fundo!</b></h1>
+    <div class="botoes">
+        <button id="azul" onclick="cor1()">Azul</button>
+        <button id="vermelho" onclick="cor2()">Vermelho</button>
+        <button id="verde" onclick="cor3()">Verde</button>
+    </div>
+    <script>
+        function cor1(){
+            var azul = document.getElementById('cor');
+            azul.style.background = 'blue'
+        }
+        function cor2(){
+            var vermelho = document.getElementById('cor');
+            vermelho.style.background =  'red'
+        }
+        function cor3(){
+            var verde = document.getElementById('cor');
+            verde.style.background =  'green'
+        }
+    </script>
+</body>
+</html>
