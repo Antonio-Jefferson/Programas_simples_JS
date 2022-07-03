@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body{
+            background: rgb(102, 139, 196);
+        }
+        h1{
+            text-align: center;
+            color: #fff;
+        }
+        section{
+            margin: auto;
+            width: 500px;
+            height: 400px;
+            justify-content: center;
+            background: #fff;
+            border-radius: 10px;
+        }
+        footer{
+            width: 500px;
+            margin:auto;
+            margin-top: 20px;
+            text-align: center;
+            background: #fff;
+            
+        }
+        #img{
+            margin-left: 50px;
+            border-radius: 50%;
+        }
+        #txt{
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+<body onload="carregar()">
+    <h1>HORA DO DIA</h1>
+    <section>
+        <div id="txt">
+            aqui vai aparecer a mensagem 
+        </div>
+        <div id="imagem">
+            <img id="img" src="./img/noite.png" alt="noite">
+        </div>
+    </section>
+    <footer>
+        &copy; AntônioJefferson
+    </footer>
+    <script>
+        function carregar(){
+            var txt = document.getElementById('txt');
+            var img = document.getElementById('img');
+            var data = new Date();
+            var hora = data.getHours();
+            if(hora >= 0 && hora < 12){
+                //Bom dia!
+                img.src = './img/manha.jpg'
+                txt.innerHTML = `Agora são ${hora} hora da manhã.`;
+                document.body.style.background = '#e4b215'
+            }else if( hora >= 12 && hora < 18){
+                //Boa tarde!
+                img.src = './img/tarde.jpg'
+                txt.innerHTML = `Agora são ${hora} hora da tarde.`;
+                document.body.style.background = '#f06d03'
+            }   
+            else{
+                //Boa noite!
+                img.scr = './img/noite.jpg'
+                txt.innerHTML = `Agora são ${hora} hora da noite.`;
+                document.body.style.background = '#584268'
+            }
+
+        }
+    </script>
+</body>
+</html>

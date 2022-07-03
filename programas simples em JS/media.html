@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a Média</title>
+    <link rel="shortcut icon" href="./img/simbolo-de-matematica.png" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        body{
+            background-image: linear-gradient(to right, rgb(121, 121, 121), rgb(170, 172, 170), rgb(235, 235, 235));
+        }
+        .conteiner{
+            display: flex;
+            justify-content: space-around;
+        }
+        .conteudo h1{
+            font-size: 30px;
+            color: rgb(239, 235, 235);
+            text-align: center;
+            padding: 20px;
+            padding-top: 40px;
+            margin-bottom: 25px;
+        }
+        .conteudo{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 600px;
+            background-image:linear-gradient(to left, rgb(228, 136, 75), rgb(255, 154, 77)) ;
+            margin-top: 70px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 50px rgba(50, 50, 50, 0.856);
+       
+        }
+        div{
+            margin: 20px;
+            margin-left: 130px;
+        }
+        label{
+            color: rgb(239, 235, 235);
+            font-size: 20px;
+        }
+        input{
+            width: 50px;
+            padding: 4px;
+            border-radius: 8px;
+            border: none;
+            background-color: rgb(232, 228, 228);
+        }
+        input:hover{
+            background-color: #fff;
+        }
+        p{
+            margin: auto;
+            width: 80px;
+            height: 30px;
+            background-color: #fff;
+            padding: 8px;
+        }
+        #res{
+            padding-right: 8px;
+            border-radius: 8px;
+            background-color: rgb(232, 228, 228);
+        }
+        #btn{
+            font-size: 1em;
+            margin: auto;
+            width: 120px;
+            height: 60px;
+            border-radius: 20px;
+            border: none;
+        }
+        #btn:hover{
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            background-color: rgb(211, 85, 12);
+            
+        }
+        .img{
+            margin-top: 100px;
+            margin-right: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="conteiner">
+        <div class="conteudo">
+            <h1>CALCULADORA DE MÉDIA</h1>
+            <div>
+                <label for="nota1">Nota 1: </label>
+                <input type="number" name="nota1" id="n1">
+            </div>
+            <div>
+                <label for="nota2">Nota 2: </label>
+                <input type="number" name="nota2" id="n2">
+            </div>
+            <div>
+                <label for="nota3">Nota 3: </label>
+                <input type="number" name="nota3" id="n3">
+            </div>
+            <p id="res"></p>
+            <input type="button" value="CALCULAR" name="botao" id="btn" onclick="clicar()">
+        </div>
+        <div class="img">
+            <img src="./img/img-01512px.png" alt="simbolo">
+        </div>
+    </section>
+   
+    <script>
+        function clicar(){
+            var n1 = document.getElementById('n1');
+            var n2 = document.getElementById('n2');
+            var n3 = document.getElementById('n3');
+            var res = document.getElementById('res');
+            var nu1 = Number(n1.value)
+            var nu2 = Number(n2.value)
+            var nu3 = Number(n3.value)
+            var media = (nu1 + nu2 + nu1) / 3;
+            res.innerHTML = media;
+        }
+    </script>
+</body>
+</html>
