@@ -37,15 +37,15 @@
     <section>
      <div>
          <label for="number">INÍCIO</label>
-         <input id="num1" type="number" name="numero">
+         <input id="num1" type="number" >
      </div>
      <div>
          <label for="number">FIM</label>
-         <input id="num2" type="number" name="numero">
+         <input id="num2" type="number" >
      </div>
      <div>
          <label for="number">PASSO</label>
-         <input id="num3" type="number" name="numero">
+         <input id="num3" type="number" >
      </div>
      <input id='bnt'type="button" value="CONTAR" onclick="contar()">
      <div id="resultado">
@@ -57,12 +57,12 @@
     </footer>
     <script>
         function contar(){
-            var num1 = document.getElementById('num1');
-            var num2 = document.getElementById('num2');
-            var num3 = document.gentElementById('num3');
-            var resultado = document.getElementById('resulatdo');
+            let num1 = document.getElementById('num1');
+            let num2 = document.getElementById('num2');
+            let num3 = document.getElementById('num3');
+            let resultado = document.getElementById('resulatdo');
             if (num1.value.length == 0 || num2.value.length == 0 || num3.value.length == 0)
-                console.arlet('[ERRO] VERIFIQUE SE OS CAMPUS ESTÃO INSERIDOS CORRETAMENTES')
+                alert('[ERRO] VERIFIQUE SE OS CAMPUS ESTÃO INSERIDOS CORRETAMENTES')
             
             
         }
